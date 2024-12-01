@@ -5,6 +5,11 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function HomePage() {
+  const trustedCompanies = [
+    { name: "Okto", logo: "/images/okto.png" },
+    { name: "Sui", logo: "/images/sui.jpeg" },
+    { name: "aptos", logo: "/images/aptos.png" },
+  ];
   // const [isMenuOpen, setIsMenuOpen] = useState(false);
   // const [url, setUrl] = useState("");
 
@@ -17,12 +22,12 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-[#f1f1e9]">
       {/* Navigation */}
-      <nav className="border-b border-[#e4ebf3] bg-[#f1f1e9]">
+      <nav className=" bg-[#f1f1e9]">
         <div className="mx-auto max-w-7xl px-4 py-5">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center">
               <Image
-                src="/images/logo_main.svg"
+                src="/images/logo.svg"
                 alt="Certify Logo"
                 width={156}
                 height={40}
@@ -126,7 +131,7 @@ export default function HomePage() {
             </div>
             <div className="mt-10 md:mt-0">
               <Image
-                src="/images/ethereum-eth.svg"
+                src="/images/eth.svg"
                 alt="Ethereum Logo"
                 width={193}
                 height={193}
@@ -137,8 +142,58 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="border-b border-[#e4ebf3] px-4 py-16">
+      <section className="border-b bg-white border-[#e4ebf3] py-16 px-4">
+        <div className="mx-auto max-w-7xl">
+          <h2 className="mb-12 text-center text-2xl font-bold text-gray-900">
+            Trusted By
+          </h2>
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+            {trustedCompanies.map((company) => (
+              <div
+                key={company.name}
+                className="flex items-center justify-center p-4"
+              >
+                <Image
+                  src={company.logo}
+                  alt={`${company.name} logo`}
+                  width={40}
+                  height={40}
+                  className="w-auto grayscale hover:grayscale-0 transition-all duration-300"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <div className="w-full border-b border-[#e4ebf3] bg-white px-4 py-20">
+        <div className="mx-auto p-10 bg-[#f1f1e9]  flex max-w-5xl items-start gap-8">
+          <Image
+            src="images/eth.svg"
+            alt="Ethereum logo"
+            width={300}
+            height={300}
+            className="rounded-full bg-black"
+          />
+
+          <div className="min-h-[300px] flex-1 bg-white p-8">
+            <p className="text-gray-500">forget certificates...</p>
+
+            <div className="mt-8 flex justify-between">
+              <div className="space-y-8">
+                <h2 className="text-3xl">earn timeless proof...</h2>
+                <h2 className="text-3xl">get certified with Certify NFTs</h2>
+              </div>
+
+              <button className="h-fit rounded-full bg-[#dbfb58] px-8 py-3 font-bold">
+                CONTACT US
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section className="border-by border-[#e4ebf3] bg-white px-4 py-16">
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
             <div className="text-center">
@@ -161,17 +216,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="bg-[#f1f1e9] px-4 py-12">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 flex flex-col justify-between md:flex-row">
             <div className="mb-8 md:mb-0">
               <Image
-                src="/images/logo_main.svg"
+                src="/images/logo.svg"
                 alt="Certify Logo"
                 width={156}
-                height={40}
-                className="h-10"
+                height={156}
               />
             </div>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-16">
