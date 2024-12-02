@@ -67,7 +67,7 @@ export default function LoginPage() {
               ? "Loading..."
               : session
               ? "Continue with Okto"
-              : "Sign in with Google"}
+              : "Sign in with Okto"}
           </span>
         </div>
 
