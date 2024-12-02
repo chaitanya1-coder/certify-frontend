@@ -24,7 +24,7 @@ export default function LoginPage() {
       authenticate(session.id_token, (result, error) => {
         if (result) {
           console.log("Okto authentication successful:", result);
-          router.push("./dashboard");
+          router.push("/dashboard");
         } else {
           console.error("Okto authentication error:", error);
         }
