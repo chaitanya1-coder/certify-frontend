@@ -8,7 +8,7 @@ import AuthProvider from "./AuthProvider";
 const AppContext = createContext();
 
 export function AppProvider({ children }) {
-  const [apiKey, setApiKey] = useState("your-api-key-here"); // Set your actual API key
+  const [apiKey, setApiKey] = useState("c5c963a3-5529-4025-9931-4002cbccb517"); // Set your actual API key
   const [buildType, setBuildType] = useState(BuildType.SANDBOX);
 
   return (
