@@ -1,6 +1,5 @@
 "use client";
 
-import { LoginModal } from "@/components/login";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -52,17 +51,12 @@ export default function HomePage() {
               <Link href="#" className="mx-2 px-3 py-2 text-sm font-bold">
                 Contact Us
               </Link>
-              <div
-                onClick={() => setIsLoginModalOpen(true)}
-                className="ml-4 rounded-full bg-[#dbfb58] px-6 py-3 text-sm font-bold uppercase tracking-wider outline outline-2 outline-black transition-colors hover:bg-[#32343a] hover:text-white"
+              <Link
+                href="/login"
+                className="ml-4 cursor-pointer rounded-full bg-[#dbfb58] px-6 py-3 text-sm font-bold uppercase tracking-wider outline outline-2 outline-black transition-colors hover:bg-[#32343a] hover:text-white"
               >
                 Get Started
-              </div>
-
-              <LoginModal
-                isOpen={isLoginModalOpen}
-                onClose={() => setIsLoginModalOpen(false)}
-              />
+              </Link>
             </div>
 
             {/* Mobile menu button */}
